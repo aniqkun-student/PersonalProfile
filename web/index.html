@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset ="UTF-8">
+        <meta name ="viewport" content ="width=device-width, initial-scale=1.0">
+        <title>Personal Profile</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Roboto, sans-serif;
+                background-color: #f4f7fa;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 50px 20px;
+                min-height: 100vh;
+                margin: 0;
+                color: #333;
+            }
+            .form-container {
+                background-color: #ffffff;
+                padding: 40px;
+                border-radius: 12px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                width: 100%;
+                max-width: 800px;
+            }
+            h1 {
+                color: #00897b;
+                border-bottom: 3px solid #e0f2f1;
+                padding-bottom: 10px;
+                margin-bottom: 30px;
+                text-align: left;
+                font-size: 2.2em;
+            }
+            .input-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px 30px;
+            }
+            .input-group {
+                position: relative;
+                margin-bottom: 20px;
+            }
+            .input-group:nth-child(5),
+            .input-group:nth-child(6) {
+                grid-column: 1 / -1;
+            }
+            
+            label {
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                color: #888;
+                font-size: 0.9em;
+                transition: 0.2s ease all;
+                pointer-events: none;
+            }
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                width: 100%;
+                padding: 25px 15px 10px 15px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                background-color: #fcfcfc;
+                color: #333;
+                transition: border color 0.3s, box-shadow 0.3s;
+                font-size: 1em;
+            }
+            input:focus + label,
+            input:not(:placeholder-shown) + label,
+            textarea:focus + label,
+            textarea:not(:placeholder-shown) + label {
+                top: 5px;
+                left: 15px;
+                font-size: 0.7em;
+                color: #00897b;
+            }
+            input:focus,
+            textarea:focus {
+                border-color: #00897b;
+                box-shadow: 0 0 5px rgba(0, 137, 123, 0.3);
+                outline: none;
+            }
+            textarea {
+                resize: vertical;
+                height: 80px;
+            }
+            button {
+                background-color: #00897b;
+                color: white;
+                padding: 14px 25px;
+                cursor: pointer;
+                font-size: 1.1em;
+                font-weight: 600;
+                width: 100%;
+                margin-top: 20px;
+                transition: background-color 0.3s, transform 0.1s;
+            }
+            button:hover {
+                background-color: #00695c;
+                transform: translateY(-2px);
+            }
+        </style>
+    </head>
+    <body>
+    <div class="form-container">
+        <h1>Create Your Digital Profile</h1>
+        <form action="ProfileProcessor" method="POST">
+            <div class="input-grid">
+                
+                <div class="input-group">
+                    <input type="text" id="name" name="name" placeholder=" " required>
+                    <label for="name">Full Name</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="studentID" name="studentID" placeholder=" " required>
+                    <label for="studentID">Student ID</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="program" name="program" placeholder=" " required>
+                    <label for="program">Program/Course</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email Address</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="hobbies" name="hobbies" placeholder=" " required>
+                    <label for="hobbies">Hobbies (e.g., Reading, Coding, Hiking)</label>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <textarea id="introduction" name="introduction" placeholder=" " required></textarea>
+                <label for="introduction">Short Self-Introduction (2-3 sentences)</label>
+            </div>
+
+            <button type="submit">Publish My Modern Profile</button>
+        </form>
+    </div>
+</body>
+</html>
