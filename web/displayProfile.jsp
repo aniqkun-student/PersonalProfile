@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>${name}'s Digital Profile</title>
-    <!-- Creative CSS for a professional, light, and organized dashboard theme -->
+    
     <style>
         body {
             font-family: 'Segoe UI', Roboto, sans-serif;
@@ -24,7 +24,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 900px;
-            border-left: 6px solid #00897b; /* Teal accent */
+            border-left: 6px solid #00897b; /* Teal style */
         }
         .header {
             text-align: center;
@@ -92,7 +92,7 @@
             color: #2c3e50;
         }
 
-        /* Mobile Adjustments */
+      
         @media (max-width: 600px) {
             .profile-dashboard {
                 padding: 20px;
